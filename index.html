@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoZ - Your Cryptocurrency Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.exchangeRateConfig = {
+        apiKey: "81ccfe598564ffd250a84bd6",
+        baseUrl: "https://v6.exchangerate-api.com/v6/"
+      };
+    </script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <img src="logo.png" alt="CryptoZ Logo" />
+          <span>Crypto<span class="highlight-z">Z</span></span>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#price">Price</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="#signin" class="btn btn-text">Sign In</a>
+          <a href="#getstarted" class="btn btn-primary">Get started</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>
+            Your all-in-one platform to buy, sell, trade, and earn
+            Cryptocurrencies
+          </h1>
+          <p>
+            Open a free account in minutes right from your phone and make your
+            money go further
+          </p>
+          <form class="signup-form">
+            <input type="email" placeholder="Email Address..." required />
+            <button type="submit" class="btn btn-primary">Get started</button>
+          </form>
+        </div>
+        <div class="hero-widget">
+          <img src="Cam2.png" alt="Bitcoin" class="floating-coin coin-1" />
+          <div class="widget-container">
+            <h2>Currency Converter</h2>
+            <div class="widget-field">
+              <label>Amount</label>
+              <div class="currency-input">
+                <div class="currency-select" data-type="from">
+                  <img
+                    src="usd.jpeg"
+                    alt="USD flag"
+                    class="flag-icon current-flag"
+                  />
+                  <span class="current-currency">USD</span>
+                  <span class="dropdown-arrow">▼</span>
+                  <div class="currency-dropdown">
+                    <div
+                      class="currency-option"
+                      data-currency="USD"
+                      data-flag="usd-flag.png"
+                    >
+                      <img src="usd.jpeg" alt="USD" class="flag-icon" />
+                      <span>USD</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="GBP"
+                      data-flag="Frame 8766.png"
+                    >
+                      <img src="Frame 8766.png" alt="GBP" class="flag-icon" />
+                      <span>GBP</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="EUR"
+                      data-flag="eur-flag.png"
+                    >
+                      <img src="eur.jpeg" alt="EUR" class="flag-icon" />
+                      <span>EUR</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="BTC"
+                      data-flag="btc-flag.png"
+                    >
+                      <img src="btc1.png" alt="BTC" class="flag-icon" />
+                      <span>BTC</span>
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  value="1.00"
+                  class="currency-value"
+                  inputmode="decimal"
+                  placeholder="Enter amount"
+                />
+              </div>
+            </div>
+            <div class="widget-field">
+              <label>Converted to</label>
+              <div class="currency-input">
+                <div class="currency-select" data-type="to">
+                  <img
+                    src="Frame 8769.png"
+                    alt="AUD flag"
+                    class="flag-icon current-flag"
+                  />
+                  <span class="current-currency">AUD</span>
+                  <span class="dropdown-arrow">▼</span>
+                  <div class="currency-dropdown">
+                    <div
+                      class="currency-option"
+                      data-currency="AUD"
+                      data-flag="Frame 8769.png"
+                    >
+                      <img src="Frame 8769.png" alt="AUD" class="flag-icon" />
+                      <span>AUD</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="USD"
+                      data-flag="usd-flag.png"
+                    >
+                      <img src="usd.jpeg" alt="USD" class="flag-icon" />
+                      <span>USD</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="EUR"
+                      data-flag="eur-flag.png"
+                    >
+                      <img src="eur.jpeg" alt="EUR" class="flag-icon" />
+                      <span>EUR</span>
+                    </div>
+                    <div
+                      class="currency-option"
+                      data-currency="BTC"
+                      data-flag="btc1.png"
+                    >
+                      <img src="btc1.png" alt="BTC" class="flag-icon" />
+                      <span>BTC</span>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="currency-value" readonly />
+              </div>
+            </div>
+            <div class="widget-field">
+              <label>Date</label>
+              <div class="date-selector">
+                <button class="date-nav prev" aria-label="Previous date">
+                  ◀
+                </button>
+                <span>17 April 2025</span>
+                <button class="date-nav next" aria-label="Next date">▶</button>
+              </div>
+            </div>
+            <div class="currency-shortcuts">
+              <span data-currency="EUR">EUR</span>
+              <span data-currency="GBP">GBP</span>
+              <span data-currency="BTC">BTC</span>
+            </div>
+          </div>
+          <img
+            src="Cam3.png"
+            alt="Ethereum"
+            class="floating-coin converter-coin"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- New Partners & Stats Section -->
+    <section class="partners-stats">
+      <div class="container">
+        <div class="crypto-partners">
+          <div class="partner-logo">
+            <img src="binance.PNG" alt="Binance" />
+          </div>
+          <div class="partner-logo">
+            <img src="coinbase.PNG" alt="Coinbase" />
+          </div>
+          <div class="partner-logo">
+            <img src="btc1.png" alt="Bitcoin" />
+          </div>
+          <div class="partner-logo">
+            <img src="tether.PNG" alt="Tether" />
+          </div>
+          <div class="partner-logo">
+            <img src="bitmex.PNG" alt="BitMEX" />
+          </div>
+        </div>
+
+        <div class="stats-container">
+          <div class="stat-card">
+            <h2>99k</h2>
+            <p>People have joined</p>
+          </div>
+          <div class="stat-card">
+            <h2>50k</h2>
+            <p>VIP users have joined</p>
+          </div>
+          <div class="stat-card">
+            <h2>100+</h2>
+            <p>Big Companies have joined</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Update Features section container -->
+    <section class="features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="features-content">
+              <h2 class="section-title">
+                The Most Trusted Cryptocurrency Platform
+              </h2>
+
+              <div class="feature-item">
+                <span class="feature-number">01</span>
+                <div class="feature-content">
+                  <h3 class="feature-title">Sync between platforms</h3>
+                  <p class="feature-description">
+                    No matter if you're using our web interface or mobile app —
+                    your data is always synced. Just one account for all our
+                    services.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-number">02</span>
+                <div class="feature-content">
+                  <h3 class="feature-title">More focus, less clutter</h3>
+                  <p class="feature-description">
+                    No ads, just the crypto and content you love.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-number">03</span>
+                <div class="feature-content">
+                  <h3 class="feature-title">Security by default</h3>
+                  <p class="feature-description">
+                    Enable privacy mode and app locking to protect your data.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="features-image">
+              <img
+                src="Capture1.png"
+                alt="CryptoZ Platform Mobile Interface"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Cards Section -->
+<section class="features-cards-section">
+  <div class="container">
+    <div class="features-grid">
+      <!-- Create Portfolio Card -->
+      <div class="feature-card portfolio-card">
+        <div class="card-content">
+          <h2 class="card-title">Create portfolio today</h2>
+          <p class="card-description">Buy and sell popular digital currencies, keep track of them in the one place. Has a variety of features that make it the best place to start trading.</p>
+        </div>
+        <div class="card-image">
+          <img src="mog1.PNG" alt="Portfolio Dashboard" class="mockup-image">
+        </div>
+      </div>
+      
+      <!-- Lightning-Fast Trading Card -->
+      <div class="feature-card trading-card">
+        <div class="card-image">
+          <img src="mog2.PNG" alt="Trading Charts" class="mockup-image">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Lightning-Fast Crypto Trading</h2>
+          <p class="card-description">Track Bitcoin, Ethereum, and thousands more coins in real-time by comparing their daily, weekly, or monthly performance.</p>
+        </div>
+      </div>
+      
+      <!-- Security Card -->
+      <div class="feature-card security-card">
+        <div class="card-image">
+          <img src="mog3.PNG" alt="Security Features" class="mockup-image">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Security From Day One</h2>
+          <p class="card-description">Safety comes first. We've got dedicated fraud prevention and security teams working around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get Started Section -->
+<section class="get-started-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Get Started in Just Few Minutes</h2>
+      <p class="section-subtitle">Has a variety of features that make it the best place to start trading</p>
+    </div>
+    
+    <div class="steps-container">
+      <!-- Step 1: Sign Up -->
+      <div class="step-card">
+        <div class="step-image">
+          <img src="Frame 219.png" alt="Sign Up" class="step-icon">
+        </div>
+        <h3 class="step-title">Sign Up</h3>
+        <p class="step-description">Buy Bitcoin or Ethereum, the securely store it in your wallet or send it on easily to friends.</p>
+      </div>
+      
+      <!-- Step 2: Fund -->
+      <div class="step-card">
+        <div class="step-image">
+          <img src="Frame 220.png" alt="Fund Account" class="step-icon">
+        </div>
+        <h3 class="step-title">Fund</h3>
+        <p class="step-description">Choose your preferred payment method such as bank transfer or credit card to top up your wallet.</p>
+      </div>
+      
+      <!-- Step 3: Buy Crypto -->
+      <div class="step-card">
+        <div class="step-image">
+          <img src="Frame 221.png" alt="Buy Crypto" class="step-icon">
+        </div>
+        <h3 class="step-title">Buy Crypto</h3>
+        <p class="step-description">Sign up for free wallet on web, iOS or Android and follow our easy process to set up your profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">What people are saying</h2>
+    
+    <div class="testimonials-grid">
+      <!-- First testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab1.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+      </div>
+      
+      <!-- Second testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab2.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Third testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab3.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."</p>
+      </div>
+      
+      <!-- Fourth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab4.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Fifth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab5.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Sixth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab6.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Seventh testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab7.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Eighth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab8.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Ninth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab9.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Tenth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab10.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">John doe</h4>
+            <p class="user-title">CEO/Founder Design Agency</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      </div>
+      
+      <!-- Eleventh testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab2.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">Sarah Wilson</h4>
+            <p class="user-title">Senior Crypto Analyst</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+      </div>
+      
+      <!-- Twelfth testimonial -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">
+            <img src="ab5.png" alt="Avatar" class="avatar-img">
+          </div>
+          <div class="user-info">
+            <h4 class="user-name">Michael Chang</h4>
+            <p class="user-title">Blockchain Developer</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Update CTA Banner section for better structure -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-content">
+        <h2 class="cta-title">Take your first step into safe, secure crypto investing</h2>
+        <a href="#" class="cta-button">Get started</a>
+      </div>
+      
+      <div class="crypto-icons">
+        <img src="bitcoin.png" alt="Bitcoin" class="bitcoin-icon">
+        <img src="eth.png" alt="Ethereum" class="ethereum-icon">
+        <img src="luna.png" alt="Luna" class="luna-icon">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Trust and Safety</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="#">What's Trending</a></li>
+                        <li><a href="#">Product News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">University</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Market Updates</a></li>
+                        <li><a href="#">Learn Stacks</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Stock & Forex</a></li>
+                        <li><a href="#">Cash Card</a></li>
+                        <li><a href="#">Crypto</a></li>
+                        <li><a href="#">Options</a></li>
+                        <li><a href="#">Gold</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">System Status</a></li>
+                        <li><a href="#">Areas of Availability</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Site Widgets</a></li>
+                        <li><a href="#">Tax</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                    
+                    <div class="newsletter">
+                        <h3>Newsletter</h3>
+                        <p style="font-size: 14px; color: rgba(255, 255, 255, 0.8); margin-bottom: 10px;">Stay updated with the latest in crypto</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="footer-bottom">
+                <div>
+                    <div class="footer-flex">
+                        <div class="footer-logo">
+                            <img src="logo1.png" alt="CryptoZ Logo" />
+                            <span>CryptoZ</span>
+                        </div>
+                        
+                        <div class="mobile-app">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="white"/>
+                                </svg>
+                                <div>
+                                    <span class="app-title">Download on the</span>
+                                    <span class="app-name">App Store</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                                    <path d="M17.9 5.6C17.1 4.8 16.5 4.5 15.7 4.5C14.9 4.5 14.3 4.9 13.5 4.9C12.7 4.9 12.1 4.5 11.3 4.5C10.5 4.5 9.7 4.9 9 5.6C7.8 6.8 7.6 8.8 8.2 10.5C8.6 11.7 9.2 12.8 10 13.5C10.6 14.1 11.1 14.4 11.7 14.4C12.3 14.4 12.6 14 13.5 14C14.3 14 14.6 14.4 15.3 14.4C15.9 14.4 16.4 14.1 17 13.5C17.6 13 18 12.2 18.3 11.4C17.5 11 17 10.3 17 9.5C17 8.7 17.3 8 17.9 7.5C17.9 6.9 17.9 6.1 17.9 5.6ZM13.8 3.7C14.1 3.3 14.4 3 14.9 2.7C15.3 2.5 15.7 2.4 16.2 2.4C16.2 3.1 16 3.8 15.6 4.3C15.2 4.8 14.5 5.2 13.8 5.2C13.8 4.7 13.8 4.2 13.8 3.7ZM19.9 15.5C20.6 16.1 21 16.8 21 17.8C21 18.8 20.6 19.4 20 20C19.5 20.6 18.8 21 18 21C17.2 21 16.4 20.6 16 20C15.5 19.4 15.2 18.8 15.2 17.8C15.2 16.8 15.5 16.1 16.1 15.5C16.7 14.9 17.5 14.6 18.3 14.6C18.8 14.6 19.4 14.9 19.9 15.5ZM7.9 15.5C8.5 16.1 8.8 16.8 8.8 17.8C8.8 18.8 8.5 19.4 7.9 20C7.4 20.6 6.6 21 5.9 21C5.1 21 4.4 20.6 3.9 20C3.3 19.4 3 18.8 3 17.8C3 16.8 3.4 16.1 3.9 15.5C4.5 14.9 5.1 14.6 5.9 14.6C6.6 14.6 7.4 14.9 7.9 15.5ZM12 9.5C12 10.3 11.3 11 10.5 11C9.7 11 9 10.3 9 9.5C9 8.7 9.7 8 10.5 8C11.3 8 12 8.7 12 9.5Z" fill="white"/>
+                                </svg>
+                                <div>
+                                    <span class="app-title">GET IT ON</span>
+                                    <span class="app-name">Google Play</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 5.92375C21.2563 6.25 20.4637 6.46625 19.6375 6.57125C20.4875 6.05375 21.1363 5.24625 21.4412 4.29625C20.6488 4.7625 19.7738 5.095 18.8412 5.2775C18.0887 4.47625 17.0162 4 15.8462 4C13.5763 4 11.7487 5.8275 11.7487 8.0975C11.7487 8.4175 11.7762 8.72375 11.8438 9.01C8.435 8.84125 5.41875 7.2325 3.3925 4.7475C3.03875 5.345 2.83125 6.05375 2.83125 6.8125C2.83125 8.235 3.5625 9.4925 4.6525 10.2275C3.99375 10.215 3.3475 10.0225 2.8 9.7225C2.8 9.735 2.8 9.75125 2.8 9.7675C2.8 11.76 4.22125 13.415 6.085 13.7912C5.75125 13.8837 5.3875 13.9287 5.01 13.9287C4.7475 13.9287 4.4825 13.9137 4.23375 13.8612C4.765 15.485 6.2725 16.6788 8.065 16.7175C6.67 17.8162 4.89875 18.4788 2.98125 18.4788C2.645 18.4788 2.3225 18.4638 2 18.4225C3.81625 19.5938 5.96875 20.2737 8.29 20.2737C15.835 20.2737 19.96 14 19.96 8.5925C19.96 8.415 19.9538 8.24375 19.945 8.0725C20.7588 7.475 21.4425 6.74125 22 5.92375Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM9.8 16.6C9.5 16.6 9.18 16.41 9.18 16C9.18 15.69 9.36 15.4 9.68 15.4H9.8C10.11 15.4 10.4 15.59 10.4 16C10.4 16.31 10.12 16.6 9.8 16.6ZM9.75 14.42H9.73C9.23 14.42 8.73 14.19 8.73 13.42V13.39C8.73 11.26 10.7 10.62 11.45 10.4C11.38 10.27 11.34 10.12 11.34 9.96C11.34 9.45 11.75 9.18 12.25 8.97C12.89 8.67 13.21 8.36 13.21 7.83C13.21 7.37 12.73 7 12.15 7L12.04 7C11.53 7 11.03 7.15 10.63 7.45C10.21 7.77 10 8.21 10.05 8.66L10.06 8.67C10.11 9.09 9.24 9.11 9.17 8.67C9.1 8.05 9.39 7.45 9.92 7.01C10.46 6.56 11.17 6.31 11.91 6.3L12.04 6.3C12.94 6.3 13.81 6.85 13.81 7.81C13.81 8.57 13.38 9.08 12.53 9.48C12.14 9.64 11.97 9.77 11.95 10.03C11.95 10.03 11.95 10.04 11.95 10.04C11.95 10.29 12.18 10.46 12.32 10.52C14.18 10.69 14.13 12.32 14.13 13.4C14.13 14.19 13.63 14.42 13.13 14.42C12.79 14.42 12.45 14.26 12.45 13.91C12.45 13.55 12.71 13.41 12.96 13.41C13.21 13.41 13.31 13.44 13.33 13.29C13.35 13.09 13.36 12.89 13.33 12.69C13.21 11.8 12.62 11.37 11.44 11.37C10.51 11.37 9.75 11.4 9.75 13.4V13.42H9.75V14.42V14.42Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2ZM16.2 19.8C18.18 19.8 19.8 18.18 19.8 16.2V7.8C19.8 5.82 18.18 4.2 16.2 4.2H7.8C5.82 4.2 4.2 5.82 4.2 7.8V16.2C4.2 18.18 5.82 19.8 7.8 19.8H16.2ZM12 7.75C14.35 7.75 16.25 9.65 16.25 12C16.25 14.35 14.35 16.25 12 16.25C9.65 16.25 7.75 14.35 7.75 12C7.75 9.65 9.65 7.75 12 7.75ZM12 14.05C13.125 14.05 14.05 13.125 14.05 12C14.05 10.875 13.125 9.95 12 9.95C10.875 9.95 9.95 10.875 9.95 12C9.95 13.125 10.875 14.05 12 14.05ZM16.5 7.15C16.5 6.4425 17.0675 5.875 17.775 5.875C18.4825 5.875 19.05 6.4425 19.05 7.15C19.05 7.8575 18.4825 8.425 17.775 8.425C17.0675 8.425 16.5 7.8575 16.5 7.15Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5933 7.20272C21.3818 6.3744 20.7256 5.71816 19.8973 5.50667C18.3369 5.1 12 5.1 12 5.1C12 5.1 5.66307 5.1 4.10267 5.50667C3.27444 5.71816 2.61823 6.3744 2.40673 7.20272C2 8.76307 2 12.01 2 12.01C2 12.01 2 15.2569 2.40673 16.8173C2.61823 17.6456 3.27444 18.3018 4.10267 18.5133C5.66307 18.92 12 18.92 12 18.92C12 18.92 18.3369 18.92 19.8973 18.5133C20.7256 18.3018 21.3818 17.6456 21.5933 16.8173C22 15.2569 22 12.01 22 12.01C22 12.01 22 8.76307 21.5933 7.20272ZM9.90909 15.0963V8.92363L15.5495 12.01L9.90909 15.0963Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 14px; color: rgba(255, 255, 255, 0.8); max-width: 280px;">
+                        Do you know you can do more with crypto while on the go? Download our app and get started today.
+                    </p>
+                </div>
+                
+                <div class="copyright">
+                    © 2025 Designed by PH Technologies. All rights reserved | <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
